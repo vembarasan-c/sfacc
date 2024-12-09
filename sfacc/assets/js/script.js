@@ -54,3 +54,46 @@ window.addEventListener("scroll", function () {
     goTopBtn.classList.remove("active");
   }
 });
+
+// Counter Animation
+const counters = document.querySelectorAll('.stats-title');
+const speed = 200; // The lower the slower
+
+const startCounters = () => {
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            
+            // Lower inc to slow and higher to speed up
+            const inc = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + inc);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+        updateCount();
+    });
+};
+
+// Start animation when section is in view
+const statsSection = document.querySelector('.stats-list');
+const observerOptions = {
+    root: null,
+    threshold: 0.1,
+    rootMargin: "0px"
+};
+
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            startCounters();
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+observer.observe(statsSection);
