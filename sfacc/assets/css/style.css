@@ -440,15 +440,15 @@ body {
 }
 
 .service-card .card-icon {
-  background-image: url("../images/service-banner-pattern.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-color: hsla(335, 87%, 53%, 0.12);
   aspect-ratio: 1 / 1;
-  max-width: 165px;
+  max-width: 100px;
   display: grid;
   place-content: center;
   margin-inline: auto;
+  border-radius: 50%;
   transition: var(--transition-1);
 }
 
@@ -1156,14 +1156,16 @@ body {
 }
 
 .services-ngo-heading {
+  font-style: italic;
+  font-size: larger;
+  text-align: center;
   text-transform: capitalize;
-  font-size: clamp(1.8rem, 1.5rem + 0.5vw, 2rem); /* Increase font size */
 }
 
 .services-ngo-text {
-  margin: 1rem 0 1.5rem; /* Adjust margins */
+  text-align: center;
+  margin-top: 5px;
   color: #565656;
-  font-size: 1rem; /* Increase text size */
 }
 
 .services-ngo-card-inner {
@@ -1367,4 +1369,55 @@ body {
   border-radius: 12px;
   background-color: rgb(105, 87, 193);
   color: white;
+}
+
+
+
+
+
+/*  Header sections with image */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+              url('../images/profile-3.webp') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hero-content {
+  color: white;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
 }
