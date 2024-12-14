@@ -17,7 +17,7 @@
     <!-- 
     - custom css link
   -->
-    <link rel="stylesheet" href="assets/css/donate.css" />
+    <link rel="stylesheet" href="assets/css/member.css" />
     
 
     <!-- 
@@ -42,64 +42,57 @@
     - #HEADER
   -->
 
-    <header class="header" data-header>
-      <div class="container">
-        <div class="overlay" data-overlay></div>
-        <!-- <img src="/assets/images/bluewings.png" alt="" width="80px" height="80px" /> -->
-        <a href="#">
-          <h1 class="logo">SFACC</h1>
-        </a>
-
-        <nav class="navbar" data-navbar>
-          <div class="navbar-top">
-            <a href="index.html" class="logo">SFACC</a>
-
-            <button
-              class="nav-close-btn"
-              aria-label="Close Menu"
-              data-nav-close-btn
-            >
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-          </div>
-
-          <ul class="navbar-list">
-            <li class="navbar-item">
-              <a href="index.html" class="navbar-link" data-navbar-link>Home</a>
-            </li>
-
-           
-           
-            <li class="navbar-item">
-              <a href="#member" class="navbar-link" data-navbar-link
-                >Membership</a
-              >
-            </li>
-
-           
-
-            <li class="navbar-item">
-              <a href="#contact" class="navbar-link" data-navbar-link>Contact Us</a>
-            </li>
-          </ul>
-        </nav>
-
-       
-
-        <button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
-          <ion-icon name="menu-outline"></ion-icon>
-        </button>
-      </div>
-    </header>
-
+  <header class="header" style="margin-bottom: 10px;" data-header>
+    <div class="container">
+      <div class="overlay" data-overlay></div>
+      
+      <a href="#" class="logo-wrapper">
+        <h1 class="logo">SFACC</h1>
+      </a>
+  
+      <!-- Hamburger Menu Button -->
+      <button class="hamburger-menu" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+  
+      <!-- Mobile Navigation -->
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link">About</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#services" class="navbar-link">Stories</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#features" class="navbar-link">Services</a>
+          </li>
+          <li class="navbar-item">
+            <a href="#" class="navbar-link">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 <!-- hero section -->
 
 <!-- ...  header  ... -->
 
-<main>
+<main></main>
   <article>
     <!-- Banner Section -->
-    <section class="banner-section" style="background-image: url('assets/images/profile-1.webp'); background-size: cover; background-position: center; ">
+    <section class="banner-section" style="
+      background-image: url('assets/images/profile-1.webp'); 
+      background-size: cover; 
+      background-position: center;
+      height: 45vh; /* Set height to 35% of viewport height */
+      margin-top: 80px; /* Add margin-top to push content below navbar */
+      ">
       <div class="banner-container">
         <div class="banner-content" style="margin-left: 5%; text-align: left;">
           <h2 class="banner-title">Become a Member Today</h2>
@@ -112,12 +105,31 @@
         </div>
       </div>
     </section>
+  </article>
+</main>
 
 
+ 
+<!-- ANNOUNCEMENT Banner DONE -->
+  <div class="announcement-banner">
+    <div class="announcement-content">
+      <div class="announcement-item">
+        <span>Welcome to Sixty-Four Arts and Crafts & Cinemas</span>
+      </div>
+      <div class="announcement-item">
+        <span>SFACC Members: Please share the Police Verification Document at</span>
+        <a href="mailto:info@sfacc.in">info@sfacc.in</a>
+      </div>
+      <div class="announcement-item">
+        <span>To be Updated Soon</span>
+      </div>
+    </div>
+  </div>
 
-    <!-- ... existing banner section ... -->
+    <!-- ... announcement banner end ... -->
 
-<section class="membership-form-section" id="member">
+
+<section class="membership-form-section">
   <div class="form-container">
     <form   class="membership-form" name="submit-to-google-sheet" action="https://script.google.com/macros/s/AKfycbwDGSgWKXG_Xa9asEM6LjCFOOhnSG9hTLjMjOT6hGw-WpFXsA5NGS182AEyWiSm9xLW/exec" >
       <h3 class="form-title">Become a Member</h3>
@@ -149,19 +161,6 @@
         <input type="text" id="city" name="city" required placeholder="Enter your city">
       </div>
 
-      <!-- File input -->
-      <div class="form-group">
-        <label for="document">Upload Documents (ID Proof)</label>
-        <input type="file" 
-               id="document" 
-               name="document" 
-               accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
-               required
-               class="file-input">
-        <small class="file-help">Accepted formats: PDF, DOC, DOCX, JPG, PNG (Max 5MB)</small>
-      </div>
-
-
       <div class="form-row">
         <div class="form-group">
           <label for="pan">PAN Number</label>
@@ -185,7 +184,7 @@
   -->
 
   
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="footer-content">
       <div class="footer-section brand">
         <a href="#" class="logo">SFACC</a>
@@ -239,10 +238,10 @@
     <!-- 
     - #GO TO TOP
   -->
-
+<!-- 
     <a href="#top" class="go-top active" aria-label="Go To Top" data-go-top>
       <ion-icon name="arrow-up-outline"></ion-icon>
-    </a>
+    </a> -->
 
     <!-- 
     - custom js link
@@ -359,6 +358,31 @@
             })
         })
       </script>
+
+
+<script>
+  // Add this to your script.js file
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const navbar = document.querySelector('.navbar');
+  const overlay = document.querySelector('.overlay');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navbar.classList.toggle('active');
+    overlay.classList.toggle('active');
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!navbar.contains(e.target) && !hamburger.contains(e.target)) {
+      hamburger.classList.remove('active');
+      navbar.classList.remove('active');
+      overlay.classList.remove('active');
+    }
+  });
+});
+</script>
 
 
   </body>

@@ -97,3 +97,20 @@ const observer = new IntersectionObserver(function(entries, observer) {
 }, observerOptions);
 
 observer.observe(statsSection);
+
+
+// const goTopBtn = document.querySelector("[data-go-top]");
+if (goTopBtn) {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                goTopBtn.classList.add("active");
+            } else {
+                goTopBtn.classList.remove("active");
+            }
+        });
+    });
+
+    observer.observe(goTopBtn);
+}
+
