@@ -167,7 +167,8 @@ body {
 .h3 { font-family: var(--ff-source-sans-pro); }
 
 .btn {
-  background-image: var(--gradient-2);
+  background-color: var(--st-patricks-blue);
+  /* background-image: var(--gradient-2); */
   background-size: 200%;
   color: var(--white);
   padding: 12px 35px;
@@ -1556,35 +1557,49 @@ Member Section Styles */
 /* FOOTER */
 
 
-.map-btn {
-  display: inline-flex;
+/* CSS */
+.map-container {
+  display: flex;
   align-items: center;
-  padding: 6px 12px;
+  gap: 10px;
+}
+
+.map-container ion-icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+.map-btn {
+  display: inline-block;
+  padding: 8px 16px;
   background-color: var(--st-patricks-blue);
-  /* border: 1px solid #ddd; */
-  border-radius: 4px;
-  color: #333;
-  font-size: 14px;
+
+  /* background-color: transparent; */
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
   text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 .map-btn:hover {
-  background-color: #e0e0e0;
-  /* border-color: #ccc; */
-  color: #000;
-  transform: translateY(-1px);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.map-btn ion-icon {
-  margin-right: 6px;
-  font-size: 16px;
+  background-color: #fff;
+  color: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.2);
 }
 
 .map-btn span {
-  line-height: 1;
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
+
+.map-btn:hover span {
+  transform: scale(1.05);
+}
+
 
 .footer {
   background-color: rgb(17, 25, 65);
